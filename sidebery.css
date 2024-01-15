@@ -34,6 +34,10 @@ text-shadow: none;
 display: none
 }
 
+.Tab[data-parent="true"][data-folded="true"] .fav-icon {
+	opacity: 0.5 !important;
+}
+
 .Tab {
 font-size: 14px;
 
@@ -52,8 +56,3 @@ display: none
 .Tab[data-discarded="true"] > .body > .t-box {
     opacity: 1;
 }
-
-/* .Tab-icon {
-	width: 18px;
-	height: 18px;
-} */
