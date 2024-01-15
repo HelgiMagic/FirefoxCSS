@@ -1,1 +1,44 @@
+#root.root {--accent: red;}
+#root.root {--tabs-font: ;}
+#root.root {--tabs-height: 35px;}
+#root.root {--tabs-margin: 1px;}
+#root.root {--tabs-inner-gap: 5px;}
+#root.root {--general-border-radius: 7px;}
+
+#root.root {--nav-btn-active-shadow: none;}
+#root.root {--nav-btn-height: 30px;}
+#root.root {--general-margin: 5px;}
+#root.root {--frame-bg: #f9f9fb;}
+#root.root {--toolbar-bg: #f9f9fb;}
+#sidebar-header {display: none;}
+
+.top-shadow {
+display: none
+}
+
+/* #root:not(:hover){
+  --tabs-indent: 0;
+  --tabs-lvl-opacity: 0;
+} */
+
+.len {
+opacity: 1 !important;
+}
+
+.Tab {
+font-size: 14px;
+text-allign: center;
+margin-left: 5px;
+padding-right: 10px;
+}
+
+.Tab[data-discarded="true"] > .body > .fav,
+.Tab[data-discarded="true"] > .body > .t-box {
+    opacity: 1;
+}
+
+/* .Tab-icon {
+	width: 18px;
+	height: 18px;
+} */
 
