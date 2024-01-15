@@ -1,106 +1,92 @@
-:root{--delay:0;--transition-time:0;--positionX1:48px;--positionX2:absolute;--fullscreen-sidebar-width:1px}@media (-moz-platform:macos){#TabsToolbar:not([customizing=true]){visibility:collapse!important}:root:not([customizing=true]) #nav-bar:not([inFullscreen]){padding-left:80px!important}:root:not([customizing=true]) #TabsToolbar .titlebar-buttonbox-container{visibility:visible!important;position:absolute;top:12px;left:0;display:block}}@media (-moz-gtk-csd-available),(-moz-platform:linux){.browser-toolbar:not(.titlebar-color){background-color:transparent!important;box-shadow:none!important}#TabsToolbar:not([customizing=true]){visibility:collapse!important}#toolbar-menubar{padding-top:0!important}:root:not([customizing=true]) #toolbar-menubar[inactive]+#TabsToolbar .titlebar-buttonbox-container{visibility:visible!important;position:absolute;top:var(--uc-win-ctrl-vertical-offset);display:block;z-index:101}:root[tabsintitlebar][sizemode=normal]:not([gtktiledwindow=true]):not([customizing=true]) #nav-bar{border-top-left-radius:env(-moz-gtk-csd-titlebar-radius);border-top-right-radius:env(-moz-gtk-csd-titlebar-radius)}:root[tabsintitlebar]:not([customizing=true]){--uc-win-ctrl-btn-width:38px;--uc-win-ctrl-padding:12px;--uc-win-ctrl-vertical-offset:8px;--uc-win-ctrl-drag-space:20px}:root[tabsintitlebar][lwtheme]:not([customizing=true]){--uc-win-ctrl-btn-width:30px;--uc-win-ctrl-padding:12px;--uc-win-ctrl-vertical-offset:5px;--uc-win-ctrl-drag-space:20px}@media (-moz-gtk-csd-minimize-button),(-moz-gtk-csd-maximize-button),(-moz-gtk-csd-close-button){#nav-bar{--uc-navbar-padding:calc(var(--uc-win-ctrl-btn-width) * 1)}}@media (-moz-gtk-csd-minimize-button) and (-moz-gtk-csd-maximize-button),(-moz-gtk-csd-minimize-button) and (-moz-gtk-csd-close-button),(-moz-gtk-csd-maximize-button) and (-moz-gtk-csd-close-button){#nav-bar{--uc-navbar-padding:calc(var(--uc-win-ctrl-btn-width) * 2)}}@media (-moz-gtk-csd-minimize-button) and (-moz-gtk-csd-maximize-button) and (-moz-gtk-csd-close-button){#nav-bar{--uc-navbar-padding:calc(var(--uc-win-ctrl-btn-width) * 3)}}@media (-moz-gtk-csd-minimize-button),(-moz-gtk-csd-maximize-button),(-moz-gtk-csd-close-button){@media not (-moz-gtk-csd-reversed-placement){#nav-bar{padding-inline:0 calc(var(--uc-navbar-padding,0) + var(--uc-win-ctrl-padding) + var(--uc-win-ctrl-drag-space))!important}.titlebar-buttonbox-container{right:0}}@media (-moz-gtk-csd-reversed-placement){#nav-bar{padding-inline:calc(var(--uc-navbar-padding,0) + var(--uc-win-ctrl-padding) + var(--uc-win-ctrl-drag-space)) 0!important}.titlebar-buttonbox-container{left:0}}}#navigator-toolbox[style*="margin-top: -"] .titlebar-buttonbox-container,[inDOMFullscreen=true] .titlebar-buttonbox-container{transform:translateY(-100px)}}@media (-moz-platform:windows),(-moz-platform:windows-win10){:root[tabsintitlebar]{--uc-window-control-width:137px}#nav-bar{border-inline:var(--uc-window-drag-space-width,80px) solid var(--toolbar-bgcolor);border-inline-style:solid!important;border-right-width:calc(var(--uc-window-control-width,0px) + var(--uc-window-drag-space-width,0px));padding-top:.5px!important;margin-left:-80px}#back-button{margin-top:-.5px!important}#forward-button{margin-top:-.5px!important}#reload-button{margin-top:-.5px!important}#PanelUI-button{margin-top:-.5px!important}#nav-bar-overflow-button{margin-top:-.5px!important}:root{--uc-toolbar-height:32px;--chrome-content-separator-color:none!important}:root:not([uidensity=compact]){--uc-toolbar-height:38px}#TabsToolbar{visibility:collapse!important}#TabsToolbar .titlebar-buttonbox-container{visibility:hidden!important}:root:not([sizemode=maximized]) .titlebar-buttonbox-container{margin-top:3px}:root:not([inFullscreen]) #nav-bar{margin-top:calc(0px - var(--uc-toolbar-height));z-index:2}#toolbar-menubar{min-height:unset!important;height:var(--uc-toolbar-height)!important;position:relative}.titlebar-buttonbox{z-index:3!important}.titlebar-buttonbox *{width:35px;height:38px}#main-menubar{-moz-box-flex:1;background-color:var(--toolbar-bgcolor,--toolbar-non-lwt-bgcolor);background-clip:padding-box;border-right:30px solid transparent;border-image:linear-gradient(to left,transparent,var(--toolbar-bgcolor,--toolbar-non-lwt-bgcolor) 30px) 20/30px}#toolbar-menubar:not([inactive]){z-index:2}#toolbar-menubar[inactive]>#menubar-items{opacity:0;pointer-events:none;margin-left:var(--uc-window-drag-space-width,0)}:root[inFullscreen] #nav-bar{border-right:none!important}}#browser{position:relative}#nav-bar,#urlbar{z-index:100}#sidebar-box:not([lwt-sidebar]){appearance:unset!important}#sidebar-box[sidebarcommand*=tabcenter]{z-index:1}#sidebar-box[sidebarcommand*=tabcenter] #sidebar-header{visibility:collapse;display:none}#main-window:not([chromehidden~=toolbar]) #sidebar-box[sidebarcommand*=tabcenter],#main-window:not([chromehidden~=toolbar]) [sidebarcommand*=tabcenter] #sidebar{display:block!important;min-width:48px!important;max-width:48px!important;width:48px}#main-window:not([chromehidden~=toolbar]) #sidebar-box[sidebarcommand*=tabcenter]:not([hidden]){display:block;position:var(--positionX2);min-width:48px;max-width:48px;overflow:hidden;border-right:1px solid var(--sidebar-border-color);z-index:1;top:0;bottom:0}:where(#main-window[inFullscreen]:not([chromehidden~=toolbar])) #sidebar-box[sidebarcommand*=tabcenter]:not([hidden]){min-width:var(--fullscreen-sidebar-width)!important;max-width:var(--fullscreen-sidebar-width)!important}#main-window:not([chromehidden~=toolbar]) #sidebar-box[sidebarcommand*=tabcenter]:hover,#main-window:not([chromehidden~=toolbar]) #sidebar-box[sidebarcommand*=tabcenter]:hover #sidebar{min-width:10vw!important;width:30vw!important;max-width:200px!important;z-index:1!important;transition:all var(--transition-time) ease var(--delay)}#sidebar-box[sidebarcommand*=tabcenter]:not(:hover),#sidebar-box[sidebarcommand*=tabcenter]:not(:hover) #sidebar{transition:all var(--transition-time) ease 0s}@media (width >= 1200px){#main-window:not([chromehidden~=toolbar]) #sidebar-box[sidebarcommand*=tabcenter]:hover,#main-window:not([chromehidden~=toolbar]) #sidebar-box[sidebarcommand*=tabcenter]:hover #sidebar{max-width:250px!important}}[sidebarcommand*=tabcenter]~#sidebar-splitter{display:none}[sidebarcommand*=tabcenter] #sidebar{max-height:100%;height:100%}#main-window:not([inFullscreen]):not([chromehidden~=toolbar]) #sidebar-box[sidebarcommand*=tabcenter]:not([hidden])~#appcontent{margin-left:var(--positionX1)}#main-window[inFullscreen]:not([inDOMFullscreen]):not([chromehidden~=toolbar]) #sidebar-box[sidebarcommand*=tabcenter]:not([hidden])~#appcontent{margin-left:var(--fullscreen-sidebar-width)}#main-window[inFullscreen] #sidebar{height:100vh}[sidebarcommand*=tabcenter] #sidebar-header{background:#0c0c0d;border-bottom:none!important}[sidebarcommand*=tabcenter]~#sidebar-splitter{border-right-color:#0c0c0d!important;border-left-color:#0c0c0d!important}[sidebarcommand*=tabcenter] #sidebar-close,[sidebarcommand*=tabcenter] #sidebar-switcher-target{filter:invert(100%)}@media (max-width:630px){#urlbar-container{min-width:100%!important}#menubar-items{display:none!important}} #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header{display: none}
-/* Source: https://gist.github.com/teksisto/d6b4d37219e957d9cdcdb3ec88952c15 */
-
-/*@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"); /* only needed once */
-
-/* Hide main tabs toolbar */
-#main-window[tabsintitlebar="true"]:not([extradragspace="true"]) #TabsToolbar {
-  opacity: 0;
-  pointer-events: none;
-}
-#main-window:not([tabsintitlebar="true"]) #TabsToolbar {
-  visibility: collapse !important;
-}
-
-/* Sidebar min and max width removal */
-#sidebar {
-  max-width: none !important;
-  min-width: 0px !important;
-}
-
-/* Hide splitter, when using Tree Style Tab. */
-#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] + #sidebar-splitter {
-  display: none !important;
-}
-
-/* Hide sidebar header, when using Tree Style Tab. */
-#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header {
-  visibility: collapse;
-}
-
-/* Shrink sidebar until hovered, when using Tree Style Tab. */
-:root {
-  --thin-tab-width: 1px;
-  --wide-tab-width: 250px;
-}
-
-#sidebar-box:not([sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]) {
-  min-width: var(--wide-tab-width) !important;
-  max-width: none !important;
-}
-#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] {
-  background-color: red !important;
-  position: relative !important;
-  /* transition: all 200ms !important; */
-  min-width: var(--thin-tab-width) !important;
-  max-width: var(--thin-tab-width) !important;
-}
-
-#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]:hover {
-    /* transition: all 200ms !important; */
-    min-width: var(--wide-tab-width) !important;
-    max-width: var(--wide-tab-width) !important;
-    margin-right: calc((var(--wide-tab-width) - var(--thin-tab-width)) * -1) !important;
-    z-index:1;
-}
-
-/* Esconder barra de marcadores, mostrar al pasar puntero, con retraso de medio segundo */
-/* Pop-up bookmarks toolbar */
-#navigator-toolbox #PersonalToolbar {
-  position: absolute; display:block;
-  width: 100%;
-  /* transition: all 0.1s !important; */
-  /* transition-delay:0.5s !important; */
-  transform: translateY(-200px);
-}
-
-#TabsToolbar, #nav-bar {
-  position: relative;
-  z-index: 99;
-}
-
-#navigator-toolbox #PersonalToolbar {
-  position: absolute; display:block;
-  width: 100%;
-  /* transition: all 0.1s !important; */
-  /* transition-delay:0.5s !important; */
-  transform: translateY(-200px);
-  z-index:1;
-}
-
-/* full screen toolbars */
-#navigator-toolbox[inFullscreen] toolbar:not([collapsed="true"]) {
-  visibility:visible!important;
-}
-
-/* Wider Pinned Tabs */
-.tabbrowser-tab[pinned] {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-#sidebar-box {
-  border-right: none !important;
+@media (-moz-platform: windows), (-moz-platform: windows-win10) {
+  :root[tabsintitlebar] {
+    --uc-window-control-width: 137px;
+  }
+  #nav-bar {
+    border-inline: var(--uc-window-drag-space-width, 80px) solid
+      var(--toolbar-bgcolor);
+    border-inline-style: solid !important;
+    border-right-width: calc(
+      var(--uc-window-control-width, 0px) +
+        var(--uc-window-drag-space-width, 0px)
+    );
+    padding-top: 0.5px !important;
+    margin-left: -80px;
+  }
+  #back-button {
+    margin-top: -0.5px !important;
+  }
+  #forward-button {
+    margin-top: -0.5px !important;
+  }
+  #reload-button {
+    margin-top: -0.5px !important;
+  }
+  #PanelUI-button {
+    margin-top: -0.5px !important;
+  }
+  #nav-bar-overflow-button {
+    margin-top: -0.5px !important;
+  }
+  :root {
+    --uc-toolbar-height: 32px;
+    --chrome-content-separator-color: none !important;
+  }
+  :root:not([uidensity='compact']) {
+    --uc-toolbar-height: 38px;
+  }
+  #TabsToolbar {
+    visibility: collapse !important;
+  }
+  #TabsToolbar .titlebar-buttonbox-container {
+    visibility: hidden !important;
+  }
+  :root:not([sizemode='maximized']) .titlebar-buttonbox-container {
+    margin-top: 3px;
+  }
+  :root:not([inFullscreen]) #nav-bar {
+    margin-top: calc(0px - var(--uc-toolbar-height));
+    z-index: 2;
+  }
+  #toolbar-menubar {
+    min-height: unset !important;
+    height: var(--uc-toolbar-height) !important;
+    position: relative;
+  }
+  .titlebar-buttonbox {
+    z-index: 3 !important;
+  }
+  .titlebar-buttonbox * {
+    width: 35px;
+    height: 38px;
+  }
+  #main-menubar {
+    -moz-box-flex: 1;
+    background-color: var(--toolbar-bgcolor, --toolbar-non-lwt-bgcolor);
+    background-clip: padding-box;
+    border-right: 30px solid transparent;
+    border-image: linear-gradient(
+        to left,
+        transparent,
+        var(--toolbar-bgcolor, --toolbar-non-lwt-bgcolor) 30px
+      )
+      20/30px;
+  }
+  #toolbar-menubar:not([inactive]) {
+    z-index: 2;
+  }
+  #toolbar-menubar[inactive] > #menubar-items {
+    opacity: 0;
+    pointer-events: none;
+    margin-left: var(--uc-window-drag-space-width, 0);
+  }
+  :root[inFullscreen] #nav-bar {
+    border-right: none !important;
+  }
 }
 
 #sidebar-header {
   display: none;
-}
-
-/* huy */
-
-.Sidebar {
-  border: none !important;
 }
 
 #sidebar-splitter {
