@@ -1,9 +1,9 @@
 #root.root {--accent: red;}
 #root.root {--tabs-font: ;}
-#root.root {--tabs-height: 35px;}
-#root.root {--tabs-margin: 1px;}
+#root.root {--tabs-height: 45px;}
+#root.root {--tabs-margin: 0px;}
 #root.root {--tabs-inner-gap: 5px;}
-#root.root {--general-border-radius: 7px;}
+#root.root {--general-border-radius: 12px;}
 
 #root.root {--nav-btn-active-shadow: none;}
 #root.root {--nav-btn-height: 30px;}
@@ -19,10 +19,16 @@ display: none
 /* #root:not(:hover){
   --tabs-indent: 0;
   --tabs-lvl-opacity: 0;
+#root.root {--toolbar-bg: #e3dfdd;}
 } */
 
 .len {
 opacity: 1 !important;
+text-shadow: none;
+}
+
+.top-horizontal-box .audio {
+display: none
 }
 
 .Tab {
@@ -30,6 +36,9 @@ font-size: 14px;
 text-allign: center;
 margin-left: 5px;
 padding-right: 10px;
+
+margin-top: 0px;
+margin-bottom: 0px;
 }
 
 .Tab[data-discarded="true"] > .body > .fav,
