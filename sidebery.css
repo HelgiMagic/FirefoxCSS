@@ -1,3 +1,6 @@
+#root.root {--tabs-lvl-opacity: 0;}
+
+#root.root {--general-margin: 5px;}
 #root.root {--accent: red;}
 #root.root {--tabs-font: ;}
 #root.root {--tabs-height: 45px;}
@@ -7,7 +10,7 @@
 
 #root.root {--nav-btn-active-shadow: none;}
 #root.root {--nav-btn-height: 30px;}
-#root.root {--general-margin: 5px;}
+
 #root.root {--frame-bg: #f9f9fb;}
 #root.root {--toolbar-bg: #f9f9fb;}
 #sidebar-header {display: none;}
@@ -41,6 +44,10 @@ margin-top: 0px;
 margin-bottom: 0px;
 }
 
+.exp-icon {
+display: none
+}
+
 .Tab[data-discarded="true"] > .body > .fav,
 .Tab[data-discarded="true"] > .body > .t-box {
     opacity: 1;
@@ -50,4 +57,3 @@ margin-bottom: 0px;
 	width: 18px;
 	height: 18px;
 } */
-
