@@ -5,7 +5,7 @@
 #root.root {--tabs-font: ;}
 #root.root {--tabs-height: 45px;}
 #root.root {--tabs-margin: 0px;}
-#root.root {--tabs-inner-gap: 5px;}
+#root.root {--tabs-inner-gap: 8px;}
 #root.root {--general-border-radius: 12px;}
 
 #root.root {--nav-btn-active-shadow: none;}
@@ -19,12 +19,6 @@
 display: none
 }
 
-/* #root:not(:hover){
-  --tabs-indent: 0;
-  --tabs-lvl-opacity: 0;
-#root.root {--toolbar-bg: #e3dfdd;}
-} */
-
 .len {
 opacity: 1 !important;
 text-shadow: none;
@@ -32,6 +26,10 @@ text-shadow: none;
 
 .top-horizontal-box .audio {
 display: none
+}
+
+.NavigationBar.-top {
+	padding: 0px 10px;
 }
 
 .Tab[data-parent="true"][data-folded="true"] .fav-icon {
@@ -55,4 +53,8 @@ display: none
 .Tab[data-discarded="true"] > .body > .fav,
 .Tab[data-discarded="true"] > .body > .t-box {
     opacity: 1;
+}
+
+.Tab .t-box {
+margin: 0 10px 0 0;
 }
