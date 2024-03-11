@@ -1,5 +1,4 @@
 #root.root {--tabs-lvl-opacity: 0;}
-
 #root.root {--general-margin: 5px;}
 #root.root {--accent: red;}
 #root.root {--tabs-font: ;}
@@ -7,13 +6,30 @@
 #root.root {--tabs-margin: 0px;}
 #root.root {--tabs-inner-gap: 8px;}
 #root.root {--general-border-radius: 12px;}
-
 #root.root {--nav-btn-active-shadow: none;}
 #root.root {--nav-btn-height: 30px;}
 
-#root.root {--frame-bg: #f9f9fb;}
-#root.root {--toolbar-bg: #f9f9fb;}
-#sidebar-header {display: none;}
+#root.root {
+	--toolbar-bg: var(--frame-bg);
+}
+
+#root[data-frame-color-scheme="light"] {
+	--frame-bg: #f9f9fb;
+	--len-color: rgb(0 0 0 / 0.7);
+
+	--nav-item-bg: white;
+	--tab-hover-bg: #f3f3f5;
+	--pin-tab-bg: rgba(194,193,196,0.2);
+}
+
+#root[data-frame-color-scheme="dark"] {
+	--frame-bg: #2b2a33;
+	--len-color: rgb(255 255 255 / 0.7);
+	
+	--nav-item-bg: #55555c;
+	--tab-hover-bg: #333239;
+	--pin-tab-bg: #403f47;
+}
 
 .top-shadow {
 display: none
@@ -24,10 +40,11 @@ display: none
 }
 
 .len {
+color: var(--len-color) !important;
+
 opacity: 0 !important;
 text-shadow: none !important;
 font-weight: 400 !important;
-color: rgb(0 0 0 / 0.7) !important;
 
 min-width: 10px;
 padding: 0 !important;
@@ -45,7 +62,7 @@ right: -10px !important;
 }
 
 .NavigationBar .nav-item[data-active="true"] {
-	background: white;
+	background: var(--nav-item-bg);
 	box-shadow: var(--tabs-activated-shadow);
 }
 
@@ -83,7 +100,7 @@ margin: 0 10px 0 0;
 .PinnedTabsBar .tab-wrapper {
   position: relative;
   border-radius: 6px;
-  background: rgba(194,193,196,0.2);
+  background: var(--pin-tab-bg);
   width: 22%;
   height: 43px;
   display: flex;
@@ -107,7 +124,7 @@ margin: 0 10px 0 0;
 }
 
 .PinnedTabsBar .tab-wrapper:hover {
-	background: #f3f3f5;
+	background: var(--tab-hover-bg);
 }
 
 .PinnedTabsBar .Tab[data-active="true"] .body {
