@@ -27,8 +27,8 @@
 	--len-color: rgb(255 255 255 / 0.7);
 	
 	--nav-item-bg: #55555c;
-	--tab-hover-bg: #333239;
-	--pin-tab-bg: #403f47;
+	--tab-hover-bg: rgb(64 63 71 / 1);;
+	--pin-tab-bg: rgb(64 63 71 / 0.4);
 	--tabs-activated-bg: #403f47;
 }
 
