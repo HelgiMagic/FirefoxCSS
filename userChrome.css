@@ -2,17 +2,6 @@
   :root[tabsintitlebar] {
     --uc-window-control-width: 137px;
   }
-  #nav-bar {
-    border-inline: var(--uc-window-drag-space-width, 80px) solid
-      var(--toolbar-bgcolor);
-    border-inline-style: solid !important;
-    border-right-width: calc(
-      var(--uc-window-control-width, 0px) +
-        var(--uc-window-drag-space-width, 0px)
-    );
-    padding-top: 0.5px !important;
-    margin-left: -80px;
-  }
   #back-button {
     margin-top: -0.5px !important;
   }
@@ -94,6 +83,15 @@
 }
 
 #sidebar-box {
-  min-width: 300px !important;
-  max-width: 300px !important;
+  min-width: 346px !important;
+  max-width: 346px !important;
+}
+
+#nav-bar {
+  border-right: none !important;
+  margin-right: 120px !important;
+}
+
+#navigator-toolbox {
+  background-color: var(--toolbar-bgcolor,--toolbar-non-lwt-bgcolor) !important;
 }
