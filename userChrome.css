@@ -74,6 +74,17 @@
   }
 }
 
+#nav-bar {
+  border-right: none !important;
+  margin-right: 120px !important;
+}
+
+#navigator-toolbox {
+  background-color: var(--toolbar-bgcolor,--toolbar-non-lwt-bgcolor) !important;
+}
+
+/* sidebery: */
+
 #sidebar-header {
   display: none;
 }
@@ -85,13 +96,4 @@
 #sidebar-box {
   min-width: 346px !important;
   max-width: 346px !important;
-}
-
-#nav-bar {
-  border-right: none !important;
-  margin-right: 120px !important;
-}
-
-#navigator-toolbox {
-  background-color: var(--toolbar-bgcolor,--toolbar-non-lwt-bgcolor) !important;
 }
