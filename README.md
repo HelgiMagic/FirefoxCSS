@@ -11,4 +11,5 @@ Supports white and dark theme.
 The Betterfox overrides file contains the changes that I make to the betterfox profile for more comfortable use.
    
 ![image](https://github.com/HelgiMagic/FirefoxCSS/assets/113669521/8bd15971-cfc2-48de-8d87-b0d6393022d1)
-![image](https://github.com/HelgiMagic/FirefoxCSS/assets/113669521/34b70060-be9d-4c48-bf76-7b16d41794ee)
+![image](https://github.com/HelgiMagic/FirefoxCSS/assets/113669521/ed37f4b5-910e-428f-8edc-e31926ecd343)
+
