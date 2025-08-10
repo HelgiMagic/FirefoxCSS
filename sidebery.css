@@ -1,101 +1,133 @@
-#root.root {--tabs-lvl-opacity: 0;}
-#root.root {--general-margin: 5px;}
-#root.root {--accent: red;}
-#root.root {--tabs-font: ;}
-#root.root {--tabs-height: 45px;}
-#root.root {--tabs-margin: 0px;}
-#root.root {--tabs-inner-gap: 8px;}
-#root.root {--general-border-radius: 12px;}
-#root.root {--nav-btn-active-shadow: none;}
-#root.root {--nav-btn-height: 30px;}
+#root.root {
+  --tabs-lvl-opacity: 0;
+}
+#root.root {
+  --general-margin: 5px;
+}
+#root.root {
+  --accent: red;
+}
+#root.root {
+  --tabs-font: ;
+}
+#root.root {
+  --tabs-height: 45px;
+}
+#root.root {
+  --tabs-margin: 0px;
+}
+#root.root {
+  --tabs-inner-gap: 8px;
+}
+#root.root {
+  --general-border-radius: 12px;
+}
+#root.root {
+  --nav-btn-active-shadow: none;
+}
+#root.root {
+  --nav-btn-height: 30px;
+}
 
 #root.root {
-	--toolbar-bg: var(--frame-bg);
+  --toolbar-bg: var(--frame-bg);
 }
 
-#root[data-frame-color-scheme="light"] {
-	--frame-bg: #f9f9fb;
-	--len-color: rgb(0 0 0 / 0.7);
+#root[data-frame-color-scheme='light'] {
+  --frame-bg: #f9f9fb;
+  --len-color: rgb(0 0 0 / 0.7);
 
-	--nav-item-bg: white;
-	--tab-hover-bg: #f3f3f5;
-	--pin-tab-bg: rgba(194,193,196,0.2);
+  --nav-item-bg: white;
+  --tab-hover-bg: #f3f3f5;
+  --pin-tab-bg: rgba(194, 193, 196, 0.2);
 }
 
-#root[data-frame-color-scheme="dark"] {
-	--frame-bg: #2b2a33;
-	--len-color: rgb(255 255 255 / 0.7);
-	
-	--nav-item-bg: #55555c;
-	--tab-hover-bg: rgb(64 63 71 / 1);
-	--pin-tab-bg: rgb(64 63 71 / 0.4);
-	--tabs-activated-bg: #403f47;
+#root[data-frame-color-scheme='dark'] {
+  --frame-bg: #2b2a33;
+  --len-color: rgb(255 255 255 / 0.7);
+
+  --nav-item-bg: #55555c;
+  --tab-hover-bg: rgb(64 63 71 / 1);
+  --pin-tab-bg: rgb(64 63 71 / 0.4);
+  --tabs-activated-bg: #403f47;
 }
 
 .top-shadow {
-display: none
+  display: none;
 }
 
 .top-horizontal-box .audio {
-display: none
+  display: none;
 }
 
 .len {
-color: var(--len-color) !important;
+  color: var(--len-color) !important;
 
-opacity: 0 !important;
-text-shadow: none !important;
-font-weight: 400 !important;
+  opacity: 0 !important;
+  text-shadow: none !important;
+  font-weight: 400 !important;
 
-min-width: 10px;
-padding: 0 !important;
+  min-width: 10px;
+  padding: 0 !important;
 
-top: -3px !important;
-right: -10px !important;
+  top: -3px !important;
+  right: -10px !important;
+
+  display: none !important;
 }
 
 .NavigationBar.-top {
-	padding: 0px 10px;
+  padding: 0px 10px;
 }
 
-.NavigationBar .nav-item[data-active="true"] .len {
-	opacity: 1 !important;
+.NavigationBar .nav-item[data-active='true'] .len {
+  opacity: 1 !important;
 }
 
-.NavigationBar .nav-item[data-active="true"] {
-	background: var(--nav-item-bg);
-	box-shadow: var(--tabs-activated-shadow);
+.NavigationBar .nav-item[data-active='true'] {
+  background: var(--nav-item-bg);
+  box-shadow: var(--tabs-activated-shadow);
 }
 
-.NavigationBar .nav-item[data-active="true"]:hover {
-	background: none;
+.NavigationBar .nav-item[data-active='true']:hover {
+  background: none;
 }
 
-.Tab[data-parent="true"][data-folded="true"] .fav-icon {
-	opacity: 0.5 !important;
+.NavigationBar .nav-item {
+  transform: none !important;
+  position: relative !important;
+  flex-grow: 1;
+}
+
+.NavigationBar .nav-item .badge {
+  display: none;
+}
+
+.Tab[data-parent='true'][data-folded='true'] .fav-icon {
+  opacity: 0.5 !important;
 }
 
 .Tab {
-font-size: 14px;
+  font-size: 14px;
 
-margin-left: 7px;
-padding-right: 14px;
+  margin-left: 7px;
+  padding-right: 14px;
 
-margin-top: 0px;
-margin-bottom: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .exp-icon {
-display: none
+  display: none;
 }
 
-.Tab[data-discarded="true"] > .body > .fav,
-.Tab[data-discarded="true"] > .body > .t-box {
-    opacity: 1;
+.Tab[data-discarded='true'] > .body > .fav,
+.Tab[data-discarded='true'] > .body > .t-box {
+  opacity: 1;
 }
 
 .Tab .t-box {
-margin: 0 10px 0 0;
+  margin: 0 10px 0 0;
 }
 
 .PinnedTabsBar .tab-wrapper {
@@ -109,39 +141,48 @@ margin: 0 10px 0 0;
   align-items: center;
 }
 
-#root[data-pinned-tabs-position="panel"] .PinnedTabsBar {
-	gap: 10px;
+#root[data-pinned-tabs-position='panel'] .PinnedTabsBar {
+  gap: 10px;
   padding: 0 0 10px 10px;
 }
 
-
 .PinnedTabsBar .Tab:hover .body::before {
-	background: inherit;
+  background: inherit;
 }
 
 .PinnedTabsBar .Tab {
-	width: 100%;
-	height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .PinnedTabsBar .tab-wrapper:hover {
-	background: var(--tab-hover-bg);
+  background: var(--tab-hover-bg);
 }
 
-.PinnedTabsBar .Tab[data-active="true"] .body {
+.PinnedTabsBar .Tab[data-active='true'] .body {
   background-color: inherit;
   box-shadow: inherit;
 }
 
-.tab-wrapper:has(.Tab[data-active="true"]) {
+.tab-wrapper:has(.Tab[data-active='true']) {
   background-color: var(--tabs-activated-bg);
   box-shadow: var(--tabs-activated-shadow);
 }
 
 .BottomBar {
-	background: var(--toolbar-bg);
+  background: var(--toolbar-bg);
+  display: none;
 }
 
-.new-tab-btns, .bottom-bar-space {
-	display: none !important;
+.new-tab-btns,
+.bottom-bar-space {
+  display: none !important;
+}
+
+.top-horizontal-box {
+  order: 3;
+}
+
+.NavigationBar .main-items {
+  justify-content: center;
 }
