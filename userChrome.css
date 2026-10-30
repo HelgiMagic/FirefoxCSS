@@ -97,3 +97,11 @@
   min-width: 346px !important;
   max-width: 346px !important;
 }
+
+#sidebar-panel-header {
+  display: none !important;
+}
+
+:root #sidebar-box {
+	padding-inline-start: 0 !important;
+}
